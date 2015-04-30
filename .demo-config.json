@@ -1,0 +1,18 @@
+{
+  "name":"JBoss BRMS Realtime Decision Server Demo",
+  "summary":"This demo project will provide you with an example of creating, deploying and leveraging a set of rules (decision table) in a Realtime Decision Server. You will be given examples of calling the rules as if using it from an application with the RestAPI that is exposed.",  
+  "author":"Edson Tirelli, Eric D. Schabell",
+  "categories":["brms"],
+  "level":"Easy Peasy",
+  "published":true,
+  "prerequisites":"Java 1.7 or 1.8",
+  "targetProduct":"JBoss BRMS",
+  "productVersion":"JBoss BRMS 6.1",
+  "technologies": ["JBoss BRMS"],
+  "links": [ 
+    { 
+      "name":"Code",
+      "url":"https://github.com/jbossdemocentral/brms-realtime-decision-server-demo"
+    }
+  ]
+}
