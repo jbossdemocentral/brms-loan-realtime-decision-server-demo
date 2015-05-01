@@ -80,8 +80,17 @@ Install on your machine
 
    - body of message can be found in support/loan-query.xml file, copy into Body section of RESTClient.
 
-19. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
+   - note you can adjust the credit score field in the xml message body to show rows in decision table being used.
+
+19. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container
+		using UPGRADE button to pull the latest version.
+
+   - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of container-loan1.0
+     before hitting UPGRADE button.
+
+20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
+
 
 Notes
 -----
@@ -99,6 +108,7 @@ Released versions
 See the tagged releases for the following versions of the product:
 
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
+
 
 ![Loan Project](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/loan-prj-overview.png)
 
