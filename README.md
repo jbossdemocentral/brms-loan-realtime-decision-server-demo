@@ -118,3 +118,5 @@ See the tagged releases for the following versions of the product:
 
 ![Restapi Loan Request](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/restapi-loan-request.png)
 
+![Restapi Loan Request Error](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/restapi-loan-request-error.png)
+
