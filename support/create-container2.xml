@@ -1,0 +1,12 @@
+<kie-container container-id="container2" status="RUNNING">
+	<release-id>
+		<group-id>com.redhat.demos</group-id>
+		<artifact-id>loandemo</artifact-id>
+		<version>1.0</version>
+	</release-id>
+	<resolved-release-id>
+		<group-id>com.redhat.demos</group-id>
+		<artifact-id>loandemo</artifact-id>
+		<version>1.0</version>
+	</resolved-release-id>
+</kie-container>

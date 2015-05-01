@@ -1,0 +1,16 @@
+<batch-execution>
+  <insert out-identifier="applicant">
+    <com.redhat.loandemo.Applicant>
+      <name>Eric D. Schabell</name>
+      <creditScore>230</creditScore>
+    </com.redhat.loandemo.Applicant>
+  </insert>
+    <insert out-identifier="loan">
+    <com.redhat.loandemo.Loan>
+      <amount>2500</amount>
+      <duration>24</duration>
+      <interestRate>1.5</interestRate>
+    </com.redhat.loandemo.Loan>
+  </insert>
+  <fire-all-rules />
+</batch-execution>
