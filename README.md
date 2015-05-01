@@ -7,7 +7,7 @@ using it from an application with the RestAPI that is exposed.
 
 Install on your machine
 -----------------------
-1. [Download and unzip.](https://github.com/jbossdemocentral/brms-coolstore-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/eschabell/brms-realtime-decicion-server-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
