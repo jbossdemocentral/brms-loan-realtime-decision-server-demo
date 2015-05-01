@@ -21,24 +21,24 @@ REM wipe screen.
 cls
 
 echo.
-echo #################################################################
-echo ##                                                             ##   
-echo ##  Setting up the %DEMO%     ##
-echo ##                                                             ##   
-echo ##                                                             ##   
-echo ##     ####  ####   #   #   ###    #####                       ##
-echo ##     #   # #   # # # # # #       #                           ##
-echo ##     ####  ####  #  #  #  ##     #####                       ##
-echo ##     #   # # #   #     #    #    #   #                       ##
-echo ##     ####  #  #  #     # ###     #####                       ##
-echo ##                                                             ##   
-echo ##                                                             ##   
-echo ##  brought to you by,                                         ##   
-echo ##            %AUTHORS%   ##
-echo ##                                                             ##   
-echo ##  %PROJECT%   ##
-echo ##                                                             ##   
-echo #################################################################
+echo ########################################################################
+echo ##                                                                    ##   
+echo ##  Setting up the %DEMO%            ##
+echo ##                                                                    ##   
+echo ##                                                                    ##   
+echo ##    ##### ####   ###   ####  ####    ####   ####    #   #    ####   ##
+echo ##      #   #   # #   # #     #        #   #  #   #  # # # #  #       ##
+echo ##      #   ####  #   #  ###   ###     ####   ####   #  #  #   ###    ##
+echo ##    # #   #   # #   #     #     #    #   #  #  #   #     #      #   ##
+echo ##    ###   ####   ###  ####  ####     ####   #   #  #     #  ####    ##
+echo ##                                                                    ##   
+echo ##                                                                    ##   
+echo ##  brought to you by,                                                ##   
+echo ##            %AUTHORS%          ##
+echo ##                                                                    ##   
+echo ##  %PROJECT%          ##
+echo ##                                                                    ##   
+echo ########################################################################
 echo.
 
 REM make some checks first before proceeding. 
