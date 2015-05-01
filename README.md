@@ -110,6 +110,8 @@ See the tagged releases for the following versions of the product:
 
 ![Started Container](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/started-container.png)
 
+![Restapi Auth](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/restapi-basic-authentication.png)
+
 ![Restapi Containers](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/restapi-containers.png)
 
 ![Restapi Loan Container](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/restapi-container-loan1.0.png)
