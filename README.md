@@ -90,16 +90,15 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
-[Loan Project](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/loan-prj-overview.png)
+![Loan Project](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/loan-prj-overview.png)
 
-[Artifact Repo](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/artifact-repo-loandemo.png)
+![Artifact Repo](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/artifact-repo-loandemo.png)
 
-[Deployment View](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/clean-rules-deployment-view.png)
+![Deployment View](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/clean-rules-deployment-view.png)
 
-[Kie Server Endpoint](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/kie-server-endpoint.png)
+![Kie Server Endpoint](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/kie-server-endpoint.png)
 
-[Register Server](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/register-dev-server.png)
+![Register Server](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/register-dev-server.png)
 
-[Dev Server](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/dev-server.png)
-
+![Dev Server](https://raw.githubusercontent.com/eschabell/brms-realtime-decision-server-demo/master/docs/demo-images/dev-server.png)
 
