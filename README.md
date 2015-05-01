@@ -66,12 +66,22 @@ Install on your machine
 
    - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
 
-17. Query the Realtime Decision Server with loan rules by using POST method:
+17. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
+
+   - in menu Headers -> Custom Header
+
+   - Name: Content-Type
+
+   - Value: application/xml
+
+18. Query the Realtime Decision Server with loan rules by using POST method:
 
    - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
 
    - body of message can be found in support/loan-query.xml file, copy into Body section of RESTClient.
 
+19. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
+		details.
 
 Notes
 -----
