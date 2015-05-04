@@ -110,6 +110,8 @@ See the tagged releases for the following versions of the product:
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
 
+![Digital Sign](https://raw.githubusercontent.com/jbossdemocentral/brms-realtime-decision-server-demo/master/docs/demo-images/digital-sign.png)
+
 ![Loan Project](https://raw.githubusercontent.com/jbossdemocentral/brms-realtime-decision-server-demo/master/docs/demo-images/loan-prj-overview.png)
 
 ![Artifact Repo](https://raw.githubusercontent.com/jbossdemocentral/brms-realtime-decision-server-demo/master/docs/demo-images/artifact-repo-loandemo.png)
