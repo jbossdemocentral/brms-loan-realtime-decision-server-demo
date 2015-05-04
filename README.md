@@ -91,6 +91,30 @@ Install on your machine
 20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
 
+Option 2 - Generate RH Container install
+----------------------------------
+The following steps can be used to configure and run the demo in an RH Container
+
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-realtime-decicion-server-demo/archive/master.zip)
+
+2. Add product installer to installs directory.
+
+3. Copy contents of support/docker directory to the project root.
+
+4. Build demo image.
+
+	```
+	docker build -t jbossdemocentral/brms-realtime-decicion-server-demo .
+	```
+5. Start demo container.
+
+	```
+	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-realtime-decicion-server-demo
+	```
+6. Follow instructions from above starting at step 5 replacing *localhost* with *&lt;RH_CONTAINER_HOST&gt;* when applicable
+
+Additional information can be found in the jbossdemocentral RH container [developer repository](https://github.com/jbossdemocentral/docker-developer)
+
 
 Notes
 -----
