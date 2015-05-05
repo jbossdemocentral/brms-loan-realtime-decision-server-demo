@@ -4,9 +4,11 @@ This demo project will provide you with an example of creating, deploying and le
 (decision table) in a Realtime Decision Server. You will be given examples of calling the rules as if
 using it from an application with the RestAPI that is exposed.
 
+There are two options for you to install this project; local and with Red Hat Containerization.
 
-Install on your machine
------------------------
+
+Option 1 - Install on your machine
+----------------------------------
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-loan-realtime-decicion-server-demo/archive/master.zip)
 
 2. Add products to installs directory.
@@ -91,8 +93,9 @@ Install on your machine
 20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
 		details.
 
+
 Option 2 - Generate RH Container install
-----------------------------------
+-----------------------------------------
 The following steps can be used to configure and run the demo in an RH Container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-realtime-decicion-server-demo/archive/master.zip)
@@ -130,6 +133,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v1.1 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server and Red Hat Container install option.
 
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
