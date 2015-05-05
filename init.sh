@@ -1,7 +1,8 @@
 #!/bin/sh 
-DEMO="Realtime Decision Server Demo"
+DEMO="Loan Realtime Decision Server Demo"
 AUTHORS="Edson Tirelli, Eric D. Schabell"
-PROJECT="git@github.com:jbossdemocentral/brms-realtime-decision-server-demo.git"
+PROJECT1="git@github.com:"
+PROJECT2="jbossdemocentral/brms-realtime-decision-server-demo.git"
 PRODUCT="JBoss BRMS"
 JBOSS_HOME=./target/jboss-eap-6.4
 SERVER_DIR=$JBOSS_HOME/standalone/deployments
@@ -20,7 +21,7 @@ clear
 echo
 echo "##############################################################################"
 echo "##                                                                          ##"   
-echo "##  Setting up the ${DEMO}                            ##"
+echo "##  Setting up the ${DEMO}                       ##"
 echo "##                                                                          ##"   
 echo "##                                                                          ##"   
 echo "##    ##### ####   ###   ####  ####    ####   ####    #   #    ####         ##"
@@ -32,7 +33,8 @@ echo "##                                                                        
 echo "##                                                                          ##"   
 echo "##  brought to you by ${AUTHORS}                       ##"
 echo "##                                                                          ##"   
-echo "##  ${PROJECT}  ##"
+echo "##  ${PROJECT1}                                                         ##"
+echo "##   ${PROJECT2}                ##"
 echo "##                                                                          ##"   
 echo "##############################################################################"
 echo

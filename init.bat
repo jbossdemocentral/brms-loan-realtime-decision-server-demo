@@ -2,9 +2,10 @@
 setlocal
 
 set PROJECT_HOME=%~dp0
-set DEMO=JBoss BRMS Realtime Decision ServerDemo
+set DEMO=Loan Realtime Decision Server Demo
 set AUTHORS=Edson Tirelli, Eric D. Schabell
-set PROJECT=git@github.com:jbossdemocentral/brms-realtime-decision-server-demo.git"
+set PROJECT1=git@github.com:
+set PROJECT2=jbossdemocentral/brms-realtime-decision-server-demo.git
 set PRODUCT=JBoss BRMS
 set JBOSS_HOME=%PROJECT_HOME%target\jboss-eap-6.4
 set SERVER_DIR=%JBOSS_HOME%\standalone\deployments
@@ -36,7 +37,8 @@ echo ##                                                                    ##
 echo ##  brought to you by,                                                ##   
 echo ##            %AUTHORS%          ##
 echo ##                                                                    ##   
-echo ##  %PROJECT%          ##
+echo ##  %PROJECT1%          ##
+echo ##   %PROJECT2%          ##
 echo ##                                                                    ##   
 echo ########################################################################
 echo.
