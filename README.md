@@ -4,7 +4,7 @@ This demo project will provide you with an example of creating, deploying and le
 (decision table) in a Realtime Decision Server. You will be given examples of calling the rules as if
 using it from an application with the RestAPI that is exposed.
 
-There are two options for you to install this project; local and with Red Hat Containerization.
+There are two options for you to install this project; local and containerized.
 
 
 Option 1 - Install on your machine
@@ -116,7 +116,7 @@ The following steps can be used to configure and run the demo in an RH Container
 	```
 6. Follow instructions from above starting at step 5 replacing *localhost* with *&lt;RH_CONTAINER_HOST&gt;* when applicable
 
-Additional information can be found in the jbossdemocentral RH container [developer repository](https://github.com/jbossdemocentral/docker-developer)
+Additional information can be found in the jbossdemocentral container [developer repository](https://github.com/jbossdemocentral/docker-developer)
 
 
 Notes
