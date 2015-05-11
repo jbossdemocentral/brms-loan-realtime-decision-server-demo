@@ -94,9 +94,9 @@ Option 1 - Install on your machine
 		details.
 
 
-Option 2 - Generate RH Container install
+Option 2 - Generate containerized install
 -----------------------------------------
-The following steps can be used to configure and run the demo in an RH Container
+The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/jbossdemocentral/brms-realtime-decicion-server-demo/archive/master.zip)
 
