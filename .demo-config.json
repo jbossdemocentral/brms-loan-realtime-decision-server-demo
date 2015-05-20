@@ -1,5 +1,5 @@
 {
-  "name":"JBoss BRMS Realtime Decision Server Demo",
+  "name":"JBoss BRMS Loan Realtime Decision Server Demo",
   "summary":"This demo project will provide you with an example of creating, deploying and leveraging a set of rules (decision table) in a Realtime Decision Server. You will be given examples of calling the rules as if using it from an application with the RestAPI that is exposed.",  
   "author":"Edson Tirelli, Eric D. Schabell",
   "categories":["brms"],
@@ -12,7 +12,7 @@
   "links": [ 
     { 
       "name":"Code",
-      "url":"https://github.com/jbossdemocentral/brms-realtime-decision-server-demo"
+      "url":"https://github.com/jbossdemocentral/brms-loan-realtime-decision-server-demo"
     }
   ]
 }
