@@ -9,7 +9,7 @@ There are two options for you to install this project; local and containerized.
 
 Option 1 - Install on your machine
 ----------------------------------
-1. [Download and unzip.](https://github.com/jbossdemocentral/brms-loan-realtime-decicion-server-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/archive/master.zip)
 
 2. Add products to installs directory.
 
