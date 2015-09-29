@@ -127,7 +127,9 @@ videos). After installing RESTClient in Firefox, restart and open it under TOOLS
 
 Supporting Articles
 -------------------
-[Getting Started with the Realtime Decision Server](http://www.schabell.org/2015/05/jboss-bpmsuite-quick-guide-getting-started-realtime-decision-server.html)
+- [7 Steps to Your First Rules with JBoss BRMS Starter Kit](http://www.schabell.org/2015/08/7-steps-first-rules-jboss-brms-starter-kit.html)
+
+- [Getting Started with the Realtime Decision Server](http://www.schabell.org/2015/05/jboss-bpmsuite-quick-guide-getting-started-realtime-decision-server.html)
 
 
 Released versions
