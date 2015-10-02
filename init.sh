@@ -11,9 +11,9 @@ SERVER_BIN=$JBOSS_HOME/bin
 SUPPORT_DIR=./support
 SRC_DIR=./installs
 PRJ_DIR=./projects
-BRMS="jboss-brms-6.1.0.GA-installer.jar"
-EAP="jboss-eap-6.4.0-installer.jar"
-VERSION="6.1"
+BRMS=jboss-brms-6.2.0.GA-installer.jar
+EAP=jboss-eap-6.4.3-installer.jar
+VERSION=6.2
 
 # wipe screen.
 clear 
