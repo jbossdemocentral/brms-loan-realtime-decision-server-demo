@@ -98,7 +98,7 @@ Option 2 - Generate containerized install
 -----------------------------------------
 The following steps can be used to configure and run the demo in a container
 
-1. [Download and unzip.](https://github.com/jbossdemocentral/brms-realtime-decicion-server-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/jbossdemocentral/brms-realtime-decision-server-demo/archive/master.zip)
 
 2. Add product installer to installs directory.
 
