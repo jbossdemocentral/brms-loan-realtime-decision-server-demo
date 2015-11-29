@@ -1,5 +1,5 @@
 id: jbossdemocentral-brms-loan-realtime-decision-server
-title: JBoss BRMS example of creating, deploying and leveraging a set of rules(decision table) in a Realtime Decision Server.
+title: JBoss BRMS Loan Realtime Decision Server Demo
 github_repo_url: https://github.com/jbossdemocentral/brms-loan-realtime-decision-server-demo
 technologies:
   - JBoss EAP
