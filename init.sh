@@ -11,8 +11,9 @@ SERVER_BIN=$JBOSS_HOME/bin
 SUPPORT_DIR=./support
 SRC_DIR=./installs
 PRJ_DIR=./projects
-BRMS=jboss-brms-6.2.0.GA-installer.jar
-EAP=jboss-eap-6.4.3-installer.jar
+BRMS=jboss-brms-6.2.0.CR1-installer.jar
+EAP=jboss-eap-6.4.0-installer.jar
+EAP_PATCH=jboss-eap-6.4.4-patch.zip
 VERSION=6.2
 
 # wipe screen.
@@ -52,6 +53,16 @@ else
 	exit
 fi
 
+if [ -r $SRC_DIR/$EAP_PATCH ] || [ -L $SRC_DIR/$EAP_PATCH ]; then
+	echo Product patches are present...
+	echo
+else
+	echo Need to download $EAP_PATCH package from the Customer Portal 
+	echo and place it in the $SRC_DIR directory to proceed...
+	echo
+	exit
+fi
+
 if [ -r $SRC_DIR/$BRMS ] || [ -L $SRC_DIR/$BRMS ]; then
 	echo JBoss BRMS sources are present...
 	echo
@@ -77,6 +88,17 @@ java -jar $SRC_DIR/$EAP $SUPPORT_DIR/installation-eap -variablefile $SUPPORT_DIR
 if [ $? -ne 0 ]; then
 	echo
 	echo Error occurred during JBoss EAP installation!
+	exit
+fi
+
+echo
+echo "Applying JBoss EAP 6.4.4 patch now..."
+echo
+$JBOSS_HOME/bin/jboss-cli.sh --command="patch apply $SRC_DIR/$EAP_PATCH"
+
+if [ $? -ne 0 ]; then
+	echo
+	echo Error occurred during JBoss EAP patching!
 	exit
 fi
 

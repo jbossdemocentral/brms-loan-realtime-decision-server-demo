@@ -6,7 +6,7 @@
 	logallrefupdates = false
 	precomposeunicode = true
 [remote "origin"]
-	url = file:///Users/erics/demo-projects/brms/brms-install-demo/repository1/.git
+	url = file:///Users/erics/demo-projects/brms/brms-loan-realtime-decision-server-demo/support/brms-demo-niogit/loan.git
 	fetch = +refs/heads/*:refs/heads/*
 [branch "master"]
 	remote = origin
