@@ -136,6 +136,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.2 JBoss BRMS 6.2.0, JBoss EAP 6.4.4 and demo rule project to deploy as Realtime Decision Server.
+
 - v1.1 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server and Red Hat Container install option.
 
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
