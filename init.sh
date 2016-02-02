@@ -112,7 +112,12 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 
+
 echo
+echo "  - creating kie-server user..."
+echo
+$JBOSS_HOME/bin/add-user.sh -a -r ApplicationRealm -u kieserver -p kieserver1! -ro kie-server --silent
+
 echo "  - enabling demo accounts role setup in application-roles.properties file..."
 echo
 cp $SUPPORT_DIR/application-roles.properties $SERVER_CONF

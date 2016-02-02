@@ -100,7 +100,7 @@ call set NOPAUSE=true
 echo.
 echo Applying JBoss EAP patch now...
 echo.
-call %JBOSS_HOME%/bin/jboss-cli.bat --command="patch apply %SRC_DIR%/%EAP_PATCH% --override-all"
+call %JBOSS_HOME%\bin\jboss-cli.bat --command="patch apply %SRC_DIR%/%EAP_PATCH% --override-all"
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
@@ -118,6 +118,11 @@ if not "%ERRORLEVEL%" == "0" (
 	echo.
 	GOTO :EOF
 )
+
+echo "  - creating kie-server user..."
+echo.
+call %JBOSS_HOME%\bin\add-user.bat -a -r ApplicationRealm -u kieserver -p kieserver1! -ro kie-server --silent
+echo.
 
 echo - enabling demo accounts role setup in application-roles.properties file...
 echo.
