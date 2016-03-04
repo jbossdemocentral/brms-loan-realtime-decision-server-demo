@@ -78,7 +78,7 @@ Option 1 - Install on your machine
 
 18. Query the Realtime Decision Server with loan rules by using POST method:
 
-   - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
+   - http://localhost:8080/kie-server/services/rest/server/containers/instances/container-loan1.0
 
    - body of message can be found in support/loan-query.xml file, copy into Body section of RESTClient.
 
