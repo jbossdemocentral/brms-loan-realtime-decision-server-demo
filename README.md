@@ -72,9 +72,9 @@ Option 1 - Install on your machine
 
    - in menu Headers -> Custom Header
 
-   - Name: Content-Type
+   - Name: Content-Type; Value: application/xml
 
-   - Value: application/xml
+   - Name: X-KIE-ContentType; Value: xstream
 
 18. Query the Realtime Decision Server with loan rules by using POST method:
 
