@@ -30,31 +30,21 @@ Option 1 - Install on your machine
 
 9. Open rule deployments perspective via menu Deploy -> Rules Deployments
 
-10. Register a new server by filling in pop-up:
-
-  - Endpoint: http://localhost:8080/kie-server/services/rest/server/
-  
-  - Name: DevServer (...as we are testing this in our dev environment)
-
-  - Username: erics (...who must have role of kie-server)
-
-  - Password: jbossbrms1!
-
-11. Provision starts by creating a Container, click on DevServer '+' on right.
+10. The view shows one registered Decision Server 'local-server-123'. We will provision a container on this server which will serve our loandemo rules project. Click on the '+' sign on the right of the Decision Server and enter the following details in the pop-up:
 
   - Name: container-loan1.0
 
-  - search button gathers all artifacts available, SELECT loandemo-1.0 to auto-fill rest of fields
+  - search button gathers all artifacts available, SELECT loandemo-1.0 to auto-fill rest of fields (group name, artifact id and version)
 
   - click on OK
 
-12. Container is created, click on icon far right to view details.
+11. Container is created, click on icon far right to view details.
 
-13. Select container-loan1.0 and click START to get it up and running, was orange color next to name, should turn green.
+12. Select container-loan1.0 (click on the little open circle on the left on the container) and click START to get it up and running. The orange 'power' icon next to the container name should now change into a green 'play' icon.
 
-14. See 'Resolved Release Id' section for the container and version that is running and ready for rule queries.
+13. See 'Resolved Release Id' section in the 'Container Info' panel for the container and version that is running and ready for rule queries.
 
-15. Using Firefox + RESTClient you can see which server containers are available by:
+14. Using Firefox + RESTClient you can see which server containers are available by:
 
    - Add auth credentials in menu Authentication - Basic Authentication:  Username: erics    Password: jbossbrms1!
 
@@ -62,15 +52,19 @@ Option 1 - Install on your machine
 
    - URL: http://localhost:8080/kie-server/services/rest/server/containers
 
-   - it will show container = contianer-loan1.0, meaning our container is available via the provided RestAPI 
+   - it will show container = contianer-loan1.0, meaning our container is available via the provided RESTful API 
 
-16. You can view some more information provided by the RestAPI using GET methods:
+15. You can view some more information provided by the RESTful API using GET methods:
 
    - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
+
+16. A full description of all available RESTful resources and operations exposed by the Decision Server can be found by opening this URL: http://localhost:8080/kie-server/docs
 
 17. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
 
    - in menu Headers -> Custom Header
+
+   - Name: Accept; Value: application/xml
 
    - Name: Content-Type; Value: application/xml
 
@@ -84,14 +78,11 @@ Option 1 - Install on your machine
 
    - note you can adjust the credit score field in the xml message body to show rows in decision table being used.
 
-19. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container
-		using UPGRADE button to pull the latest version.
+19. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container using UPGRADE button to pull the latest version.
 
-   - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of container-loan1.0
-     before hitting UPGRADE button.
+   - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of container-loan1.0 before hitting UPGRADE button.
 
-20. For creation or deletion of containers in the RestAPI, you need to use PUT methods, see product documentation User Guide for
-		details.
+20. For creation or deletion of containers in the RESTful API, you need to use PUT methods, see product documentation User Guide for details.
 
 
 Option 2 - Generate containerized install
