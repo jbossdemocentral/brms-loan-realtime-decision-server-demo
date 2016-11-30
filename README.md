@@ -134,34 +134,34 @@ See the tagged releases for the following versions of the product:
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
 
-![Digital Sign](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/digital-sign.jpg)
+![Digital Sign](./docs/demo-images/digital-sign.jpg)
 
-![Loan Project](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/loan-prj-overview.png)
+![Loan Project](./docs/demo-images/loan-prj-overview.png)
 
-![Artifact Repo](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/artifact-repo-loandemo.png)
+![Artifact Repo](./docs/demo-images/artifact-repo-loandemo.png)
 
-![Deployment View](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/clean-rules-deployment-view.png)
+![Deployment View](./docs/demo-images/clean-rules-deployment-view.png)
 
-![Kie Server Endpoint](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/kie-server-endpoint.png)
+![Kie Server Endpoint](./docs/demo-images/kie-server-endpoint.png)
 
-![Dev Server](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/dev-server.png)
+![Dev Server](./docs/demo-images/dev-server.png)
 
-![Create Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/create-container.png)
+![Create Container](./docs/demo-images/create-container.png)
 
-![Container Details](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/container-details.png)
+![Container Details](./docs/demo-images/container-details.png)
 
-![Start Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/start-container.png)
+![Start Container](./docs/demo-images/start-container.png)
 
-![Started Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/started-container.png)
+![Started Container](./docs/demo-images/started-container.png)
 
-![Restapi Auth](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-basic-authentication.png)
+![Restapi Auth](./docs/demo-images/restapi-basic-authentication.png)
 
-![Restapi Containers](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-containers.png)
+![Restapi Containers](./docs/demo-images/restapi-containers.png)
 
-![Restapi Loan Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-container-loan1.0.png)
+![Restapi Loan Container](./docs/demo-images/restapi-container-loan1.0.png)
 
-![Restapi Request Header](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-request-header.png)
+![Restapi Request Header](./docs/demo-images/restapi-request-header.png)
 
-![Restapi Loan Request](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-loan-request.png)
+![Restapi Loan Request](./docs/demo-images/restapi-loan-request.png)
 
-![Restapi Loan Request Response](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-loan-request-response.png)
+![Restapi Loan Request Response](./docs/demo-images/restapi-loan-request-response.png)
