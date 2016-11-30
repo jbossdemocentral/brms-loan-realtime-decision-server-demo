@@ -70,7 +70,7 @@ cp support/docker/Dockerfile .
 echo Starting Docker build.
 echo
 
-docker build -t jbossdemocentral/brms-realtime-decicion-server-demo .
+docker build -t jbossdemocentral/brms-realtime-decision-server-demo .
 
 if [ $? -ne 0 ]; then
         echo
@@ -87,14 +87,14 @@ rm Dockerfile
 echo
 echo "================================================================================================="
 echo "=                                                                                               ="
-echo "=  You can now start the $PRODUCT in a Docker container with:                         ="
+echo "=  You can now start the $PRODUCT in a Docker container with:                                 ="
 echo "=                                                                                               ="
-echo "=  docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-realtime-decicion-server-demo ="
+echo "=  docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-realtime-decision-server-demo ="
 echo "=                                                                                               ="
 echo "=  Login into business central at:                                                              ="
 echo "=                                                                                               ="
 echo "=    http://localhost:8080/business-central  (u:brmsAdmin / p:jbossbrms1!)                      ="
 echo "=                                                                                               ="
-echo "=  $PRODUCT $VERSION $DEMO Setup Complete.                             ="
+echo "=  $PRODUCT $VERSION $DEMO Setup Complete.                            ="
 echo "=                                                                                               ="
 echo "================================================================================================="
