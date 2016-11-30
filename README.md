@@ -1,11 +1,17 @@
-JBoss BRMS Loan Realtime Decision Server Demo 
+JBoss BRMS Loan Realtime Decision Server Demo
 =============================================
 This demo project will provide you with an example of creating, deploying and leveraging a set of rules
 (decision table) in a Realtime Decision Server. You will be given examples of calling the rules as if
 using it from an application with the RestAPI that is exposed.
 
-There are two options for you to install this project; local and containerized.
+There are two options for you to install this project: local and Docker.
 
+Software
+--------
+The following software is required to run this demo:
+- [JBoss EAP 7.0 installer](https://developers.redhat.com/download-manager/file/jboss-eap-7.0.0-installer.jar)
+- [JBoss BRMS 6.4.0.GA deployable for EAP 7](https://developers.redhat.com/download-manager/content/origin/files/sha256/14/148eb9be40833d5da00bb6108cbed1852924135d25ceb6c601c62ba43f99f372/jboss-brms-6.4.0.GA-deployable-eap7.x.zip)
+  - [7-Zip](http://www.7-zip.org/download.html) (Windows only): to overcome the Windows 260 character path length limit, we need 7-Zip to unzip the BRMS deployable.
 
 Option 1 - Install on your machine
 ----------------------------------
@@ -13,22 +19,22 @@ Option 1 - Install on your machine
 
 2. Add products to installs directory.
 
-3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
+3. Run 'init.sh' or 'init.ps1' file.
 
 4. Start JBoss BRMS Server by running ./target/jboss-eap-6.4/bin/standalone.sh
 
 5. Login to http://localhost:8080/business-central
 
     ```
-    - login for admin and analyst roles (u:erics / p:jbossbrms1!)
+    - login for admin and analyst roles (u:brmsAdmin / p:jbossbrms1!)
     ```
 6. Project has simple data model (Loan & Applicant) and single decision table credit score rule set.
 
-7. Build and deploy version 1.0 of project.
+7. Build and deploy version 1.0 of project. Click on "Open Project Editor", and in the project editor click on "Build -> Build and Deploy".
 
 8. View Authoring -> Artifact repository to see deployed loandemo-1.0.jar artifact.
 
-9. Open rule deployments perspective via menu Deploy -> Rules Deployments
+9. Open "Execution Servers" perspective via menu Deploy -> Execution Servers
 
 10. The view shows one registered Decision Server 'local-server-123'. We will provision a container on this server which will serve our loandemo rules project. Click on the '+' sign on the right of the Decision Server and enter the following details in the pop-up:
 
@@ -38,29 +44,27 @@ Option 1 - Install on your machine
 
   - click on OK
 
-11. Container is created, click on icon far right to view details.
+11. The container definition is created, but is not yet started. Click on the "Start" button to start the container instance on the Decision Server.
 
-12. Select container-loan1.0 (click on the little open circle on the left on the container) and click START to get it up and running. The orange 'power' icon next to the container name should now change into a green 'play' icon.
+12. Click on the container to show additional information about the container.
 
-13. See 'Resolved Release Id' section in the 'Container Info' panel for the container and version that is running and ready for rule queries.
+13. Using Firefox + RESTClient you can see which server containers are available by:
 
-14. Using Firefox + RESTClient you can see which server containers are available by:
-
-   - Add auth credentials in menu Authentication - Basic Authentication:  Username: erics    Password: jbossbrms1!
+   - Add auth credentials in menu Authentication - Basic Authentication:  Username: brmsAdmin    Password: jbossbrms1!
 
    - Method: GET
 
    - URL: http://localhost:8080/kie-server/services/rest/server/containers
 
-   - it will show container = contianer-loan1.0, meaning our container is available via the provided RESTful API 
+   - it will show container = contianer-loan1.0, meaning our container is available via the provided RESTful API
 
-15. You can view some more information provided by the RESTful API using GET methods:
+14. You can view some more information provided by the RESTful API using GET methods:
 
    - http://localhost:8080/kie-server/services/rest/server/containers/container-loan1.0
 
-16. A full description of all available RESTful resources and operations exposed by the Decision Server can be found by opening this URL: http://localhost:8080/kie-server/docs
+15. A full description of all available RESTful resources and operations exposed by the Decision Server can be found by opening this URL: http://localhost:8080/kie-server/docs
 
-17. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
+16. Now to use POST or PUT methods we need to add a header to RESTClient for our requests:
 
    - in menu Headers -> Custom Header
 
@@ -70,7 +74,7 @@ Option 1 - Install on your machine
 
    - Name: X-KIE-ContentType; Value: xstream
 
-18. Query the Realtime Decision Server with loan rules by using POST method:
+17. Query the Realtime Decision Server with loan rules by using POST method:
 
    - http://localhost:8080/kie-server/services/rest/server/containers/instances/container-loan1.0
 
@@ -78,14 +82,14 @@ Option 1 - Install on your machine
 
    - note you can adjust the credit score field in the xml message body to show rows in decision table being used.
 
-19. You can change the decision table as desired, redeploy a new version, use the Server Management Browser to manage the container using UPGRADE button to pull the latest version.
+18. You can change the decision table as desired, redeploy a new version, use the Version Configuration tab of the container definition to manage the container using UPGRADE button to pull the latest version.
 
    - you need to deploy a new version of the rules, for example version 1.1, then enter 1.1 in version field of container-loan1.0 before hitting UPGRADE button.
 
-20. For creation or deletion of containers in the RESTful API, you need to use PUT methods, see product documentation User Guide for details.
+19. For creation or deletion of containers in the RESTful API, you need to use PUT methods, see product documentation User Guide for details.
 
 
-Option 2 - Generate containerized install
+Option 2 - Run in Docker
 -----------------------------------------
 The following steps can be used to configure and run the demo in a container
 
@@ -93,19 +97,11 @@ The following steps can be used to configure and run the demo in a container
 
 2. Add product installer to installs directory.
 
-3. Copy contents of support/docker directory to the project root.
+3. Run the 'init-docker.sh' or 'init-docker.ps1' file.
 
-4. Build demo image.
+4. Start the container: `docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-realtime-decicion-server-demo`
 
-	```
-	docker build -t jbossdemocentral/brms-realtime-decicion-server-demo .
-	```
-5. Start demo container.
-
-	```
-	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/brms-realtime-decicion-server-demo
-	```
-6. Follow instructions from above starting at step 5 replacing *localhost* with *&lt;RH_CONTAINER_HOST&gt;* when applicable
+5. Follow instructions from above starting at step 5 replacing *localhost* with *&lt;RH_CONTAINER_HOST&gt;* when applicable
 
 Additional information can be found in the jbossdemocentral container [developer repository](https://github.com/jbossdemocentral/docker-developer)
 
@@ -127,6 +123,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.4 JBoss BRMS 6.4.0.GA on JBoss EAP 7.0.0.GA with demo rule project to deploy as Realtime Decision Server.
+
 - v1.3 JBoss BRMS 6.2.0-BZ-1299002 on JBoss EAP 6.4.4 with demo rule project to deploy as Realtime Decision Server.
 
 - v1.2 JBoss BRMS 6.2.0, JBoss EAP 6.4.4 and demo rule project to deploy as Realtime Decision Server.
@@ -136,37 +134,34 @@ See the tagged releases for the following versions of the product:
 - v1.0 JBoss BRMS 6.1 with demo rule project to deploy as Realtime Decision Server
 
 
-![Digital Sign](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/digital-sign.jpg)
+![Digital Sign](./docs/demo-images/digital-sign.jpg)
 
-![Loan Project](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/loan-prj-overview.png)
+![Loan Project](./docs/demo-images/loan-prj-overview.png)
 
-![Artifact Repo](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/artifact-repo-loandemo.png)
+![Artifact Repo](./docs/demo-images/artifact-repo-loandemo.png)
 
-![Deployment View](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/clean-rules-deployment-view.png)
+![Deployment View](./docs/demo-images/clean-rules-deployment-view.png)
 
-![Kie Server Endpoint](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/kie-server-endpoint.png)
+![Kie Server Endpoint](./docs/demo-images/kie-server-endpoint.png)
 
-![Register Server](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/register-dev-server.png)
+![Dev Server](./docs/demo-images/dev-server.png)
 
-![Dev Server](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/dev-server.png)
+![Create Container](./docs/demo-images/create-container.png)
 
-![Create Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/create-container.png)
+![Container Details](./docs/demo-images/container-details.png)
 
-![Container Details](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/container-details.png)
+![Start Container](./docs/demo-images/start-container.png)
 
-![Start Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/start-container.png)
+![Started Container](./docs/demo-images/started-container.png)
 
-![Started Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/started-container.png)
+![Restapi Auth](./docs/demo-images/restapi-basic-authentication.png)
 
-![Restapi Auth](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-basic-authentication.png)
+![Restapi Containers](./docs/demo-images/restapi-containers.png)
 
-![Restapi Containers](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-containers.png)
+![Restapi Loan Container](./docs/demo-images/restapi-container-loan1.0.png)
 
-![Restapi Loan Container](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-container-loan1.0.png)
+![Restapi Request Header](./docs/demo-images/restapi-request-header.png)
 
-![Restapi Request Header](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-request-header.png)
+![Restapi Loan Request](./docs/demo-images/restapi-loan-request.png)
 
-![Restapi Loan Request](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-loan-request.png)
-
-![Restapi Loan Request Response](https://raw.githubusercontent.com/jbossdemocentral/brms-loan-realtime-decision-server-demo/master/docs/demo-images/restapi-loan-request-response.png)
-
+![Restapi Loan Request Response](./docs/demo-images/restapi-loan-request-response.png)
